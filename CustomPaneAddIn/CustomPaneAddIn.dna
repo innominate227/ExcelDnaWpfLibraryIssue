@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DnaLibrary Name="CustomPane Excel Add-In" RuntimeVersion="v4.0">
+	<ExternalLibrary Path="CustomPaneAddIn.dll" ExplicitRegistration="true" LoadFromBytes="true" Pack="true" />
+
+	<Reference Path="ExcelDna.Registration.dll" Pack="true" />
+	
+	<CustomUI>
+		<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" loadImage="LoadImage" onLoad="OnLoad">
+			<ribbon>
+				<tabs>
+					<tab id="tabCustomPaneHandler" label="Custom Pane Handler">
+						<group id="grpCustomPaneHandler" label="Custom Pane Handler">
+							<button id="btnShowCustomPane" label="Show my custom pane" size="large" onAction="RunTagMacro" tag="ShowCustomPane" screentip="Shows a custom pane" />
+						</group>
+					</tab>
+				</tabs>
+			</ribbon>
+		</customUI>
+	</CustomUI>
+</DnaLibrary>
